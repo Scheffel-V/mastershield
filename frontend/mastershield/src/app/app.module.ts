@@ -15,6 +15,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { MyCharactersComponent } from './my-characters/my-characters.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginComponent } from './login/login.component';
     LogoutComponent,
     MyCharactersComponent,
     SignInComponent,
-    LoginComponent
+    LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
