@@ -1,1 +1,15 @@
-<p>character works!</p>
+<div class="container">
+    <h1>Character</h1>
+    <div class="alert alert-warning" *ngIf="characterForm.dirty && characterForm.invalid">Enter valid values.</div>
+  
+    <form (ngSubmit)="!characterForm.invalid && saveCharacter()" # characterForm="ngForm">
+      <fieldset class="form-group">
+        <label for="amount">Name</label>
+        <input style="width: 30%;" type="string" [(ngModel)]="character.name" class="form-control" name="name" required="required">
+      </fieldset>
+
+
+      <button type="submit" class="btn btn-success">Save Character</button>
+      <button style="margin-left: 10px;" class="btn btn-dark" (click)="backPage()">Back Page</button>
+    </form>
+  </div>

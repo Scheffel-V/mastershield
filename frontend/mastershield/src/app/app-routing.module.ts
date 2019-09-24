@@ -9,6 +9,7 @@ import { MyCharactersComponent } from './my-characters/my-characters.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { CharacterComponent } from './character/character.component';
 
 
 const routes: Routes = [
@@ -17,8 +18,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sign_in', component: SignInComponent },
   { path: 'my_characters', component: MyCharactersComponent, canActivate: [RouteGuardService] },
+  { path: 'my_characters/:characterId', component: CharacterComponent, canActivate: [RouteGuardService] },
   { path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService] },
-  { path: 'welcome', component: WelcomeComponent, canActivate: [RouteGuardService]},
+  { path: 'welcome', component: WelcomeComponent, canActivate: [RouteGuardService] },
   { path: '**', component: ErrorComponent }
 ];
 

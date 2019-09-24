@@ -34,7 +34,7 @@ export class SignInComponent implements OnInit {
 
     if(+this.id != -1) {
       this.userService.getUser(
-        this.id
+        Number.parseInt(this.id)
         ).subscribe(
           data => {
             this.user = data
@@ -53,8 +53,8 @@ export class SignInComponent implements OnInit {
         }
       )
     } else {
-      this.userService.updateuser(
-        this.id,
+      this.userService.updateUser(
+        Number.parseInt(this.id),
         this.user
       ).subscribe(
         data => {

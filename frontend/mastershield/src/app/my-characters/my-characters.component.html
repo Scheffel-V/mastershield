@@ -7,17 +7,13 @@
     <thead>
       <tr>
         <th style="width: 10%">Id</th>
-        <th style="width: 10%">Amount</th>
-        <th style="width: 20%">Transactions</th>
+        <th style="width: 10%">Name</th>
         <th style="width: 10%">Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let character of characters">
-        <td>{{character.id}}</td>
-        <td><button class="btn btn-dark" (click)="">View</button></td>
-        <td><button (click)="deleteCharacter(character.id)" class="btn btn-warning">Delete</button></td>
-        <td><button (click)="updateCharacter(character.id)" class="btn btn-success">Update</button></td>
+        
       </tr>
     </tbody>
   </table>

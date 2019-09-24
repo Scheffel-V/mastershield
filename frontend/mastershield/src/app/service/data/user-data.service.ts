@@ -19,8 +19,8 @@ export class UserDataService {
     )
   }
 
-  getUser(userId : string) {
-    return this.http.get<User>(`${API_URL}/users/${userId}`)
+  getUser(userId : number) {
+    return this.http.get<User>(`${API_URL}/users/${userId.toString()}`)
   }
 
   createUser(user : User) : Observable<User> {
@@ -30,14 +30,14 @@ export class UserDataService {
     )
   }
 
-  updateuser(userId : string, user : User) : Observable<User> {
+  updateUser(userId : number, user : User) : Observable<User> {
     return this.http.put<User>(
-      `${API_URL}/users/${userId}`,
+      `${API_URL}/users/${userId.toString()}`,
       user
     )
   }
 
-  deleteUser(userId : string) {
-    return this.http.delete(`${API_URL}/users/${userId}`)
+  deleteUser(userId : number) {
+    return this.http.delete(`${API_URL}/users/${userId.toString()}`)
   }
 }

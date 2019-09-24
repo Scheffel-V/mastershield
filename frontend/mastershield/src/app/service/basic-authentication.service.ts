@@ -44,7 +44,7 @@ export class BasicAuthenticationService {
   }
 
   getAuthenticatedUserId() {
-    return sessionStorage.getItem(AUTHENTICATED_USER_ID)
+    return Number.parseInt(sessionStorage.getItem(AUTHENTICATED_USER_ID))
   }
 
   getAuthenticatedUserUsername() {
